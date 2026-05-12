@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartBiz IoT | Invoice, Sensors, Quiz and Education Tools</title>
+    <meta
+      name="description"
+      content="SmartBiz IoT provides invoice and receipt generators, energy and water meter monitoring, temperature IoT sensors, control systems, savings analytics, and online quiz tools."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="SmartBiz IoT home">
+        <span class="brand-mark">SB</span>
+        <span>SmartBiz IoT</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#billing">Billing</a>
+        <a href="#iot">IoT</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="#contact">Request Demo</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Business automation, monitoring and learning tools</p>
+          <h1>Smart tools for billing, IoT and online education.</h1>
+          <p class="hero-text">
+            Generate product invoices and receipts, monitor energy meters, water meters and
+            temperature sensors, control connected devices, track savings, and run online
+            quizzes for schools or training teams.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#billing">Explore Products</a>
+            <a class="secondary-button" href="#iot">View IoT Dashboard</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Smart business operations preview">
+          <canvas id="signalCanvas" width="760" height="520" aria-hidden="true"></canvas>
+          <div class="dashboard-glass">
+            <div class="metric-strip">
+              <span>Energy</span>
+              <strong>42.8 kWh</strong>
+            </div>
+            <div class="metric-strip aqua">
+              <span>Water</span>
+              <strong>1,280 L</strong>
+            </div>
+            <div class="metric-strip coral">
+              <span>Temperature</span>
+              <strong>27.4 C</strong>
+            </div>
+            <div class="pulse-node node-one"></div>
+            <div class="pulse-node node-two"></div>
+            <div class="pulse-node node-three"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-band" aria-label="Platform highlights">
+        <div>
+          <strong>Billing</strong>
+          <span>Invoice, bill and receipt generator</span>
+        </div>
+        <div>
+          <strong>IoT Control</strong>
+          <span>Energy, water and temperature sensors</span>
+        </div>
+        <div>
+          <strong>Education</strong>
+          <span>Online quiz and learning tools</span>
+        </div>
+      </section>
+
+      <section class="section" id="billing">
+        <div class="section-heading">
+          <p class="eyebrow">Products invoice, bill and receipt generator</p>
+          <h2>Create clean bills in seconds.</h2>
+          <p>
+            A simple, GST-ready billing interface for product lists, service lines, taxes,
+            discounts, payment status, and printable receipts.
+          </p>
+        </div>
+
+        <div class="split-grid">
+          <div class="feature-list">
+            <article class="feature-card">
+              <span class="icon">IN</span>
+              <h3>Invoice Builder</h3>
+              <p>Add products, rates, quantity, tax and customer details with fast total calculation.</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">RC</span>
+              <h3>Receipt Generator</h3>
+              <p>Create paid receipts with transaction IDs, payment modes and customer records.</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon">PR</span>
+              <h3>Product Catalog</h3>
+              <p>Save products and common prices to speed up repeat billing workflows.</p>
+            </article>
+          </div>
+
+          <div class="invoice-panel" aria-label="Invoice calculator demo">
+            <div class="panel-title">
+              <span>Live Invoice Preview</span>
+              <span class="status-pill">Ready</span>
+            </div>
+            <label>
+              Product / Service
+              <input id="invoiceItem" type="text" value="Smart Energy Meter" />
+            </label>
+            <div class="form-row">
+              <label>
+                Quantity
+                <input id="invoiceQty" type="text" inputmode="numeric" value="2" />
+              </label>
+              <label>
+                Rate
+                <input id="invoiceRate" type="text" inputmode="decimal" value="2499" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Tax %
+                <input id="invoiceTax" type="text" inputmode="decimal" value="18" />
+              </label>
+              <label>
+                Discount
+                <input id="invoiceDiscount" type="text" inputmode="decimal" value="300" />
+              </label>
+            </div>
+            <div class="invoice-total">
+              <span>Grand Total</span>
+              <strong id="invoiceTotal">Rs 5,598.82</strong>
+            </div>
+            <button class="full-button" id="receiptButton" type="button">Generate Receipt</button>
+            <p class="receipt-note" id="receiptNote">Receipt number will appear here.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section iot-section" id="iot">
+        <div class="section-heading">
+          <p class="eyebrow">IoT solutions with energy, water and temperature monitoring</p>
+          <h2>Monitor, control and save from one dashboard.</h2>
+          <p>
+            Connect field meters and sensors to a secure dashboard that alerts teams, controls
+            devices, and shows how much energy, water and cost you are saving.
+          </p>
+        </div>
+
+        <div class="iot-dashboard">
+          <article class="sensor-card energy">
+            <div class="sensor-top">
+              <span class="sensor-icon">E</span>
+              <span class="status-dot online"></span>
+            </div>
+            <h3>Energy Meter</h3>
+            <strong id="energyValue">42.8 kWh</strong>
+            <p>Load monitoring, peak demand alerts and power saving reports.</p>
+          </article>
+          <article class="sensor-card water">
+            <div class="sensor-top">
+              <span class="sensor-icon">W</span>
+              <span class="status-dot online"></span>
+            </div>
+            <h3>Water Meter</h3>
+            <strong id="waterValue">1,280 L</strong>
+            <p>Leak detection, daily usage comparison and pump flow visibility.</p>
+          </article>
+          <article class="sensor-card temperature">
+            <div class="sensor-top">
+              <span class="sensor-icon">T</span>
+              <span class="status-dot warning"></span>
+            </div>
+            <h3>Temperature Sensor</h3>
+            <strong id="tempValue">27.4 C</strong>
+            <p>Cold storage, classroom, server room and factory environment tracking.</p>
+          </article>
+          <article class="control-card">
+            <h3>Remote Control</h3>
+            <div class="control-row">
+              <span>Pump Motor</span>
+              <button class="toggle is-on" type="button" data-control="Pump Motor" aria-pressed="true">
+                <span></span>
+              </button>
+            </div>
+            <div class="control-row">
+              <span>Main Relay</span>
+              <button class="toggle" type="button" data-control="Main Relay" aria-pressed="false">
+                <span></span>
+              </button>
+            </div>
+            <div class="control-row">
+              <span>Cooling Fan</span>
+              <button class="toggle is-on" type="button" data-control="Cooling Fan" aria-pressed="true">
+                <span></span>
+              </button>
+            </div>
+            <p id="controlStatus">Pump Motor is running.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="savings-band" aria-label="Saving solution">
+        <div>
+          <p class="eyebrow">Saving solution</p>
+          <h2>Turn sensor data into lower bills.</h2>
+        </div>
+        <div class="savings-grid">
+          <div>
+            <strong>18%</strong>
+            <span>Average energy reduction target</span>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <span>Alerts for leaks, overload and heat</span>
+          </div>
+          <div>
+            <strong>30 days</strong>
+            <span>Usage reports for billing decisions</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section-heading">
+          <p class="eyebrow">Online quiz and education tools</p>
+          <h2>Create tests, practice sets and training quizzes.</h2>
+          <p>
+            Build quizzes for students, employees or customers with instant scoring,
+            topic-wise questions, timer support and progress reports.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          <div class="quiz-panel">
+            <div class="panel-title">
+              <span>Sample Quiz</span>
+              <span class="status-pill">3 questions</span>
+            </div>
+            <h3 id="quizQuestion">Which meter measures electrical consumption?</h3>
+            <div class="quiz-options" id="quizOptions"></div>
+            <div class="quiz-footer">
+              <span id="quizScore">Score: 0</span>
+              <button class="secondary-button" id="nextQuestion" type="button">Next</button>
+            </div>
+          </div>
+          <div class="tool-list">
+            <article>
+              <h3>Question Bank</h3>
+              <p>Organize questions by subject, difficulty and marks.</p>
+            </article>
+            <article>
+              <h3>Timed Exams</h3>
+              <p>Run mock exams with auto-submit and instant result generation.</p>
+            </article>
+            <article>
+              <h3>Learning Reports</h3>
+              <p>Track performance by student, class, topic and test attempt.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div>
+          <p class="eyebrow">Start with a demo</p>
+          <h2>Build billing, IoT and education tools for your organization.</h2>
+          <p>
+            Tell us what you need: invoice software, meter monitoring, remote control,
+            saving analytics, quiz platform, or a custom combined solution.
+          </p>
+        </div>
+        <form class="contact-form">
+          <label>
+            Name
+            <input type="text" placeholder="Your name" />
+          </label>
+          <label>
+            Phone or Email
+            <input type="text" placeholder="Contact details" />
+          </label>
+          <label>
+            Requirement
+            <select>
+              <option>Invoice and Receipt Generator</option>
+              <option>IoT Energy / Water / Temperature Monitoring</option>
+              <option>Online Quiz and Education Tools</option>
+              <option>Complete Custom Solution</option>
+            </select>
+          </label>
+          <button class="primary-button" type="button">Send Request</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <span>SmartBiz IoT</span>
+      <span>Invoice, IoT monitoring, control, savings and education tools.</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
