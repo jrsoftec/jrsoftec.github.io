@@ -70,9 +70,9 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   color: var(--muted);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .nav-links a:hover {
@@ -649,7 +649,7 @@ footer span:first-child {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .site-header {
     position: static;
     align-items: flex-start;
